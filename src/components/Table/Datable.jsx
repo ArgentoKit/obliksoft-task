@@ -1,40 +1,24 @@
 import React from 'react'
 import s from './Datable.module.scss'
-import Male from '../../icons/male.svg'
-import Female from '../../icons/female.svg'
 import Refresh from '../../icons/refresh.svg'
-import cn from 'classnames'
+import { ReadMessages } from '../Messages/ReadMessages'
+import { UnreadMessages } from '../Messages/UnreadMessages'
+import { refreshData } from '../../common/refreshData'
 
-
-const Datable = ({ data }) => {
+const Datable = ({ readMessages, unreadMessages, setReadMessages, setUnreadMessages }) => {
     return (
-        <table className={s.table}>
-            <thead className={s.header}>
-                <img src={Refresh} alt='Обновить'/>
+        <>
+            <div className={s.header}>
+                <img src={Refresh} alt='Обновить' onClick={() => {return (setReadMessages([]), refreshData(setReadMessages, setUnreadMessages))}}/>
                 <span>Найдено 8 клиентов</span>
-            </thead>
-            <tbody>
-                {data.map((row, index) => (
-                    <tr key={index}>
-                        <td className={s.rightCell}>
-                            <div className={cn({
-                                [s.male]: row.sex === 'male',
-                                [s.female]: row.sex === 'female',
-                            }, s.gender)}>
-                                {row.sex === 'male' ? <img src={Male} alt='Male' /> : <img src={Female} alt='Female' />}
-                            </div>
-                        </td>
-                        <td>
-                            <div className={s.name}>{row.firstName} {row.lastName}</div>
-                            <div className={s.phone}>{row.phoneNumber}</div>
-                        </td>
-                        <td className={s.message}>{row.message}</td>
-                        <td className={cn(s.rightCell, s.date)}>{row.time}</td>
-                        <td className={s.date}>{row.date}</td>
-                    </tr>
-                ))}
-            </tbody>
-        </table>
+            </div>
+            <table className={s.table}>
+                <tbody>
+                    <ReadMessages readMessages={readMessages} setReadMessages={setReadMessages} setUnreadMessages={setUnreadMessages}/>
+                    <UnreadMessages unreadMessages={unreadMessages} setUnreadMessages={setUnreadMessages} setReadMessages={setReadMessages}/>
+                </tbody>
+            </table>
+        </>
     )
 }
 
