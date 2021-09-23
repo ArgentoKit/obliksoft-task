@@ -17,3 +17,12 @@
         cursor: pointer;
     }
 }
+
+.pagination {
+    display: flex;
+    justify-content: flex-end;
+    width: 60%;
+    margin-top: 20px;
+    color: #2C7DFA;
+    font-weight: 600;
+}

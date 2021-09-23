@@ -44,8 +44,9 @@ const App = () => {
         </div>
       </div>
       {console.log(readMessages[0])}
-      {readMessages[0] == undefined ? <img src={Preloader} alt='Загрузка данных'/>
-      : <Datable  readMessages={search(readMessages, query)}
+      {readMessages[0] === undefined ? <img src={Preloader} alt='Загрузка данных'/>
+      : <Datable  query={query}
+                  readMessages={search(readMessages, query)}
                   setReadMessages={setReadMessages}
                   unreadMessages={search(unreadMessages, query)}
                   setUnreadMessage={setUnreadMessages}
