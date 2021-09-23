@@ -1,6 +1,7 @@
 [{
     "firstName" : "Артём",
     "lastName" : "Сахаров",
+    "sex" : "male",
     "phoneNumber" : "096 498 05 23",
     "message" : "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
     "time" : "11:20",
@@ -9,6 +10,7 @@
 {
     "firstName" : "Дарья",
     "lastName" : "Панова",
+    "sex" : "female",
     "phoneNumber" : "097 132 22 11",
     "message" : "In metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci",
     "time" : "11:25",
@@ -17,6 +19,7 @@
 {
     "firstName" : "Арина",
     "lastName" : "Ларина",
+    "sex" : "female",
     "phoneNumber" : "050 788 17 92",
     "message" : "Scelerisque eleifend donec pretium vulputate sapien nec sagittis aliquam malesuada bibendum arcu",
     "time" : "12:42",
@@ -25,6 +28,7 @@
 {
     "firstName" : "Владислав",
     "lastName" : "Маслов",
+    "sex" : "male",
     "phoneNumber" : "050 211 61 16",
     "message" : "Aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique senectus",
     "time" : "14:45",
@@ -33,6 +37,7 @@
 {
     "firstName" : "Дмитрий",
     "lastName" : "Тихонов",
+    "sex" : "male",
     "phoneNumber" : "097 550 88 85",
     "message" : "In hac habitasse platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim",
     "time" : "18:11",
