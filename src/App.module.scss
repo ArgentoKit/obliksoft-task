@@ -40,4 +40,20 @@
             cursor: pointer;
         }
     }
+
+    .find {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 25%;
+        right: 1.5rem;
+        height: 18px;
+        width: 18px;
+
+        img {
+            height: 18px;
+            width: 18px;
+        }
+    }
 }

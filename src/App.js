@@ -5,6 +5,7 @@ import s from './App.module.scss'
 import { search } from './common/search'
 import Cancel from './icons/cancel.svg'
 import Preloader from './icons/preloader.svg'
+import Search from './icons/search.svg'
 
 const App = () => {
   const [readMessages, setReadMessages] = useState([])
@@ -42,15 +43,18 @@ const App = () => {
         <div className={s.clear}>
           <img src={Cancel} alt='Очистить' onClick={e => setQuery('')} />
         </div>
+        <div className={s.find}>
+          <img src={Search} alt='Поиск' />
+        </div>
       </div>
       {console.log(readMessages[0])}
-      {readMessages[0] === undefined ? <img src={Preloader} alt='Загрузка данных'/>
-      : <Datable  query={query}
-                  readMessages={search(readMessages, query)}
-                  setReadMessages={setReadMessages}
-                  unreadMessages={search(unreadMessages, query)}
-                  setUnreadMessage={setUnreadMessages}
-    />}
+      {readMessages[0] === undefined ? <img src={Preloader} alt='Загрузка данных' />
+        : <Datable query={query}
+          readMessages={search(readMessages, query)}
+          setReadMessages={setReadMessages}
+          unreadMessages={search(unreadMessages, query)}
+          setUnreadMessage={setUnreadMessages}
+        />}
     </div>
   )
 }
